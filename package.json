@@ -34,9 +34,9 @@
     ],
     "publish": [
       {
-        "provider": "github",
-        "owner": "your-github-username",
-        "repo": "your-repo-name"
+        "provider": "https://github.com/Phandevbanban/AUTO-UPDATE-APP",
+        "owner": "Phandevbanban",
+        "repo": "AUTO-UPDATE-APP"
       }
     ],
     "win": {

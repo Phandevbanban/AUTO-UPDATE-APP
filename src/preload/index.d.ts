@@ -1,4 +1,10 @@
-import { ElectronAPI } from '@electron-toolkit/preload'
+import { ElectronAPI as BaseElectronAPI } from '@electron-toolkit/preload'
+
+export interface ElectronAPI extends BaseElectronAPI {
+  onUpdateAvailable: (callback: () => void) => void
+  onUpdateDownloaded: (callback: () => void) => void
+  installUpdate: () => void
+}
 
 declare global {
   interface Window {

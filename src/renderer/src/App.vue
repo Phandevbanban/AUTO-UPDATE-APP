@@ -16,16 +16,16 @@ import { ref } from 'vue'
 const updateAvailable = ref(false)
 const updateDownloaded = ref(false)
 
-window.electronAPI.onUpdateAvailable(() => {
+window.electron.onUpdateAvailable(() => {
   updateAvailable.value = true
 })
 
-window.electronAPI.onUpdateDownloaded(() => {
+window.electron.onUpdateDownloaded(() => {
   updateDownloaded.value = true
 })
 
 const installUpdate = () => {
-  window.electronAPI.installUpdate()
+  window.electron.installUpdate()
 }
 </script>
 
