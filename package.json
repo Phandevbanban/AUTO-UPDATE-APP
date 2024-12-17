@@ -20,6 +20,38 @@
     "build:mac": "npm run build && electron-builder --mac",
     "build:linux": "npm run build && electron-builder --linux"
   },
+  "build": {
+    "appId": "com.csc.pos.minimart",
+    "productName": "CSC POS Minimart",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "dist/**",
+      "node_modules/**",
+      "out/**",
+      "package.json"
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "your-github-username",
+        "repo": "your-repo-name"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    }
+  },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
