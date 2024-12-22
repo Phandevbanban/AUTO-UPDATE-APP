@@ -1,4 +1,5 @@
 <template>
+  <Versions />
   <div>
     <div v-if="updateAvailable" class="update-banner">
       <p>Update available. Downloading...</p>
@@ -12,6 +13,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import Versions from './components/Versions.vue'
 
 const updateAvailable = ref(false)
 const updateDownloaded = ref(false)
